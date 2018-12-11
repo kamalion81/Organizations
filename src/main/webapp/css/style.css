@@ -1,0 +1,29 @@
+
+.container {
+    margin-top: 20px;
+    max-width: 80%;
+    max-height: 500px;
+
+}
+
+.area{
+    height: 100px;
+    vertical-align: text-top !important;
+}
+
+.form-group{
+    text-align: left;
+}
+
+.left-panel {
+    float: left;
+
+}
+
+.right-panel {
+    padding: 20px 40px;
+    width: 40%;
+    height: 100%;
+    float: left;
+    text-align: right;
+}

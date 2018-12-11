@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myapp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://code.angularjs.org/1.7.5/angular.js"></script>
+    <script src="https://code.angularjs.org/1.7.5/angular-resource.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css" type="text/css"/>
+    <script src="js/myapp.js"></script>
+</head>
+<body ng-controller="OrgController">
+<form name="form" class="css-form form" novalidate>
+    <div class="container">
+        <div class="left-panel">
+            <div class="btn-group">
+                <button type="submit" class='btn btn-primary' ng-click="add(form.uName.$error.required)">Добавить
+                </button>
+                <button type="button" class='btn btn-primary' ng-click="delete(current.id)">Удалить</button>
+            </div>
+            <table class="table table-hover">
+                <tbody>
+                <tr ng-repeat="org in organizations" ng-click="show(org.id)">
+                    <td>{{org.name}}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="right-panel">
+            <div class="row">
+                <div class="col">
+                    <div class="form-group">
+                        <input type="text" placeholder="Наименование организации" name="uName"
+                               ng-model="current.name"
+                               class="form-control" required="">
+                    </div>
+                    <div ng-show="form.$submitted">
+                        <div ng-show="form.uName.$error.required">Укажите название организации</div>
+                    </div>
+                    <div class="form-group">
+                    <textarea placeholder="Сведения" rows="5" ng-model="current.info"
+                              class="form-control area"></textarea>
+                    </div>
+                    <div class="form-group">
+                    <textarea placeholder="Адрес" rows="5" ng-model="current.address"
+                              class="form-control area"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="row">
+                    <div class="col"><label>Телефон</label></div>
+                    <div class="col"><input type="text" ng-model="current.telephone" class="form-control"></div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col"><label>Количество сотрудников</label></div>
+                    <div class="col"><input type="number" ng-model="current.countEmployees" class="form-control">
+                    </div>
+                </div>
+            </div>
+
+            <button type="submit" class='btn btn-primary' ng-click="update(form.uName.$error.required)">Сохранить
+            </button>
+
+        </div>
+    </div>
+    </div>
+</form>
+
+
+</body>
+</html>
