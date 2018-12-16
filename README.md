@@ -4,7 +4,7 @@
 3. Скопировать проект из репозитория: git clone https://github.com/kamalion81/Organizations.git
 4. Перейти в скопированную папку с проектом
 5. Запустить основное приложение: gradlew bootRun
-6. Запустить клиента: gradlew runAngular 
+6. Запустить клиент: gradlew runAngular 
 7. В браузере перейти на стартовую страницу по адресу: http://localhost:4200/
 
 ИСПОЛЬЗОВАНИЕ ПРИЛОЖЕНИЯ:
