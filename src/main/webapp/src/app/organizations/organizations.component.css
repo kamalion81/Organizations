@@ -1,0 +1,40 @@
+.area{
+  height: 100px;
+  vertical-align: text-top !important;
+}
+
+.form-group{
+  text-align: left;
+}
+
+.left-panel {
+  float: left;
+  width: 30% !important;
+
+}
+
+.right-panel {
+  padding: 20px 40px;
+  width: 70%;
+  height: 100%;
+  float: left;
+  text-align: right;
+
+}
+
+.selected {
+  background-color: #CFD8DC !important;
+  color: white;
+}
+
+.bordered {
+  border: 1px solid black;
+}
+
+.btn-group{
+  width: 100%;
+}
+
+.btn-primary{
+  width: 50%;
+}
