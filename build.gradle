@@ -32,7 +32,6 @@ processResources {
 }
 
 task runAngular(type:Exec){
-    dependsOn "buildAngular"
     workingDir "$webappDir"
     inputs.dir "$webappDir"
     group = BasePlugin.BUILD_GROUP
