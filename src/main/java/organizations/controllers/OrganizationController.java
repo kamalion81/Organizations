@@ -16,21 +16,24 @@ public class OrganizationController {
     private OrganizationService service;
 
     @RequestMapping
+    @CrossOrigin(origins = "http://localhost:4200")
     public List<Organization> list() {
         return service.findAll();
     }
 
+    @CrossOrigin(origins = "http://localhost:4200")
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
     public Organization show(@PathVariable Integer id){
         return service.findById(id).orElseThrow(() -> new OrganizationNotFoundException(id.toString()));
     }
 
+    @CrossOrigin(origins = "http://localhost:4200")
     @RequestMapping(method = RequestMethod.POST)
     public void add(@RequestBody Organization organization) {
         service.save(organization);
     }
 
-
+    @CrossOrigin(origins = "http://localhost:4200")
     @RequestMapping(value = "/{id}", method = RequestMethod.PUT)
     public void update(@PathVariable Integer id, @RequestBody Organization organization) {
 
@@ -39,6 +42,7 @@ public class OrganizationController {
 
     }
 
+    @CrossOrigin(origins = "http://localhost:4200")
     @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
     public void delete(@PathVariable Integer id){
         service.delete(id);
